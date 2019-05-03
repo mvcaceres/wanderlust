@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" sizes="16x16" href="img/logoMarca.png">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>Formulario</title>
+    <style>
+    
+    html{
+    box-sizing: border-box;
+    }
+    *,*:before,*:after{
+    box-sizing:inherit;
+    }
+
+    main{
+        background-image: url("img/maletas_form.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width:100%;
+        height:100%;
+        background-position-x: center;
+        padding:0px 0px 20px 0px;
+        margin-top:56px;
+    }
+    h3{
+        font-size:2em;
+        padding-top:20px;
+    }
+    main{
+        padding-left:3%;
+        /* margin:55px 0px; */
+        text-align:left;
+    }
+    main h3 span{
+        color:#ffffff;
+    }
+    p.frase{
+        color: rgb(49, 49, 49);
+        font-weight: bold;
+        line-height: 2;
+    }
+    p.form{
+        color:rgb(255, 255, 255);
+        font-weight: bold;
+        margin:25px 5px;
+
+        padding:10px;
+        background-color:rgba(44, 42, 42, 0.5);
+    }
+    p.correo{
+        background-color:rgba(32, 105, 137,0.7);
+    }
+
+    p.form:nth-last-child{
+        margin-top:30px;
+    }
+    p.boton-enviar input{
+        background-color:rgb(32,105,137);
+        padding: 15px 40px;
+        color:#fff;
+        font-family: 'Noto Sans KR', sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    p.boton-enviar input:hover{
+        background-color:rgb(39, 153, 202);
+        transition: all .3s ease;
+    }
+    nav.navegacion-principal a.botones{
+          font-weight: bold;
+      }
+
+    @media (min-width:767px){
+        main{
+            margin-top:0px;
+        }
+        p.form{
+            width:50%;
+        }
+    }  
+    @media (min-width:979px){
+        main{
+            margin-top:-149px;
+            padding-top:50px;
+        }
+    }  
+
+    </style>
+</head>
+
+<body>
+
+        <header>
+  
+                <div class="encabezado">
+                      <img src="img/logoWanderlust.png" alt="logo-mobile">
+                    <div class="contenido-header">
+                         
+                          <nav class="redes-sociales">
+                                       <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                       <a href="#"><i class="fab fa-twitter"></i></a>
+                                       <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                       <a href="#"><i class="fab fa-instagram"></i></a>
+            
+                          </nav><!--Fin redes-sociales-->
+                    </div><!--Fin contenido-header-->
+            
+            
+                </div> <!--Fin encabezado-->
+            
+                
+<!--///////////////COMIENZO BARRA DE NAVEGACION///////////////-->
+            
+                <div class="barra">
+                
+                  <div class="contenedor-barra">
+                        <div class="menu-movil">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                        </div>
+            
+                    <div class="logo-marca">
+                        <img src="img/logoMarca.png" style="width:50px">
+                    </div>
+            
+                      <nav class="navegacion-principal clearfix">
+                          <a href="index.html" class="botones">Home</a>
+                          <a href="#" class="botones">Productos</a>
+                          <a href="faqs.html" class="botones">Preguntas frecuentes</a>
+                          <a href="login.html" >Iniciar sesion</a>
+                      </nav>
+                    <div class="carrito">
+                      <i class="fas fa-shopping-cart"></i>
+                    </div>
+                  </div><!--/////Fin CONTENEDOR-BARRA////-->
+                </div> <!--/////Fin BARRA DE NAVEGACION/////-->    
+            
+            </header><!--/////Fin HEADER//////-->    
+            <img class="logooculto" src="img/logoWanderlust.png"> 
+
+<main>
+   <h3>¡Unite a <span>Wanderlust!</span> </h3>
+    <p class="frase">Completá tus datos a continuación y comenzá a disfrutar los beneficios de Wanderlust:</p>
+
+   <form class= "" action="formulario.php" method="post"></form>
+        <p class="form">
+            <label for="nombre">Nombre:</label>
+            <input id= "nombre" type="text" name= "nombre" value="">
+        </p>
+
+        <p class="form">
+            <label for="apellido">Apellido:</label>
+            <input id= "apellido" type="text" name= "apellido" value="">
+        </p>
+
+        <p class="form">
+            <label for="telefono">Teléfono:</label>
+            <input id= "telefono" type="tel" name= "telefono" value="" placeholder="(011) 15-1111-1111">
+        </p>
+
+        <p class="form">
+            <label for="email">E-mail:</label>
+            <input id= "email" type="email" name= "email" value="" placeholder="tu@email.com">
+        </p>
+
+        <p class="form">
+            <label for="pass">Contraseña:</label>
+            <input id= "pass" type="password" name= "pass" value="" placeholder="ingresá tu contraseña">
+        </p>
+
+        <p class="form correo">
+            <label for="newsletter">¿Te gustaría recibir noticias en tu correo?</label>
+            <input type="checkbox" name="si" value="si" checked>
+        </p>
+        <p class="boton-enviar">
+            <input type="submit" name="Enviar" value="Enviar">
+        </p>
+    </main>
+    <footer class="site-footer">
+            <div class="contenedor">
+                  <div class="footer-informacion">
+                      <h3>Sobre <span>wanderlust</span></h3>
+                        <p>Creemos que cada viaje nos ofrece nuevas oportunidades de conectarnos con el mundo, con otras personas y con nosotros mismos.</p>
+                  </div>
+                  <div class="medios-pago">
+                      <h3>Medios de <span>Pago</span></h3>
+                      <ul><!--Medios de pago-->
+                        <li><i class="fab fa-cc-mastercard"></i> <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-amex"></i> <i class="fab fa-cc-paypal"></i></li> 
+                      </ul>
+                  </div>
+                  <div class="menu">
+                      <h3>Redes <span>sociales</span></h3>
+                      <nav class="redes-sociales">
+                          <a href="#"><i class="fab fa-facebook-f"></i></a>
+                          <a href="#"><i class="fab fa-twitter"></i></a>
+                          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                          <a href="#"><i class="fab fa-instagram"></i></a>
+                      
+                      </nav><!--Fin redes-sociales-->
+                  </div>
+          
+            </div><!--////Fin contenedor////-->
+          
+            <!--Frase Copyright-->
+            <p class="copyrights">Copyright &copy Todos los derechos reservados Wanderlust- 2019</p>
+          
+          </footer>
+
+    </body>
+</html>

@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR|Open+Sans+Condensed:300');
+*{
+  box-sizing: border-box;
+}
+html {
+    font-family: sans-serif;
+    ms-text-size-adjust: 100%;
+    webkit-text-size-adjust: 100%
+}
+body{
+  font-family: 'Noto Sans KR', sans-serif;
+  margin:0;
+  _padding:10;
+
+  _margin-top: 20px;
+  _padding-bottom: 40px;
+}
+
+.container{
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: 3%;
+    _background-color: #353535;
+    _padding:10;
+}
+section{
+  margin:  3%;
+  padding: 5%;
+  border-color: lightgrey;
+  _background-color: rgba(255,255,255,1);
+  border-style: solid;
+  border-width: thin;
+}
+.pregunta section{
+  width: 80%;
+  _background-color: rgba(255,255,255,1);
+  _margin: 3%;
+  border-radius: 3%;
+
+}
+header h1{
+  text-align: center;
+  color: lightgrey;
+  text-transform: uppercase;
+  font-family: 'Oswald',sans-serif;
+  margin: 20px;
+}
+
+header h1 span{
+    color:rgb(101, 216, 216);
+}
+
+h3{
+  font-family: 'Noto Sans KR', sans-serif;
+    size: 2em;
+  text-align: left;
+}
+p{
+  font-family: 'Noto Sans KR', sans-serif;
+  size: 1em;
+  height: 14;
+}
+.banco{
+  max-width: 200px;
+  max-height: 50px;
+}
+
+table{
+    font-family: 'Open Sans Condensed', sans-serif;
+    _border-collapse: collapse;
+    border-spacing: 20;
+    margin-left: 20;
+    _max-width: 400px;
+
+}
+thead{
+  text-align: center;
+  background-color: rgb(160, 205, 205);
+}
+
+td, th {
+    padding: 20;
+}
+.airline-name{
+      width: 130px;
+}
+.airline-dimensions{
+      width: 150px;
+      text-align: center;
+}
+.airline-weight{
+      width: 100px;
+      text-align: center;
+}
+.tabla{
+      max-width: 430px;
+}

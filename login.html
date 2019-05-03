@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="icon" sizes="16x16" href="img/logoMarca.png">
+    <title>Login</title>
+
+<style>
+     html{
+      box-sizing: border-box;
+      }
+      *,*:before,*:after{
+      box-sizing:inherit;
+      }
+     
+      h2{
+          color: white;
+          background-color: rgba(0, 0, 0, 0.5);
+          font-size: 40px;
+      }
+      .registro{
+          display:flex;
+          flex-direction:row;
+          justify-content: flex-end;
+          align-items: center;
+          margin-top:20px;
+        }
+      p.boton-inicio input{
+          text-transform: uppercase;              margin-left:20px; 
+          background-color:rgb(32, 105, 137);
+          width:155px;
+          font-weight: bold;    
+          padding:10px 20px;
+          text-align:right;
+          border: 2px solid #fff;
+          text-align:center;
+      }
+      p.boton-inicio input:hover{
+          background-color:rgb(22, 122, 165);
+          transition:all .4s ease;
+      }
+      p.boton-inicio input{
+          text-decoration: none;
+          color:#fff;
+      }
+      p.boton-registro{
+          margin-left:10px;
+          text-transform:uppercase;
+          background-color:rgb(99, 94, 94);
+          padding:10px;
+          border: 2px solid #fff;
+      }
+      p.boton-registro a{
+        text-decoration: none;
+        color:#fff;
+      }
+      div.registro p.boton-registro a:hover{
+        transition: all .3s ease;
+      }
+      p.boton-registro:hover{
+          background-color:rgba(0, 0, 0, 0.5);
+      }
+
+
+      main{
+          padding-right:5%;
+          margin:auto;
+          text-align:right;
+      }
+      p.frase{
+          color:rgb(99, 94, 94);
+          font-weight: bold;
+      }
+      p.form{
+        color:rgb(99, 94, 94);
+        font-weight: bold;
+        margin:0;
+        padding-top:10px;
+    }
+
+      nav.navegacion-principal a.botones{
+          font-weight: bold;
+      }
+
+      footer.site-footer{
+          margin-top:0;
+      }
+      main.contenedor-login {
+
+          align-content: center;
+          margin-top:50px;
+          background-image: url("img/shutterstock_683275162.jpg");
+
+          height: 100%;
+          width: 100%;
+          background-repeat:no-repeat; 
+          background-size: cover; 
+          background-position-x:center;
+      }
+    div.log1{
+    margin-top: 50px;
+    padding:50px 0px;
+}
+
+      @media (min-width:768px){
+          main.contenedor-login{
+              margin-top:0px;
+          }
+          div.log1{
+              margin:0;
+              padding:60px 0px;
+              height:60vh;
+          }
+      }
+
+      @media (min-width:979px){
+          main.contenedor-login{
+                height:100%;
+                position:relative;
+                z-index:801; 
+                margin-top:-145px;
+                
+          }
+          img.logooculto{
+              z-index: 900;
+          }
+          body{
+              margin:0;
+              padding:0;
+          }
+          div.log1{
+              margin:0;
+              padding:60px 0px;
+              height:80vh;
+          }
+      }
+
+      </style>
+
+</head>
+
+<body>
+
+    <header>
+  
+        <div class="encabezado">
+                      <img src="img/logoWanderlust.png" alt="logo-mobile">
+                <div class="contenido-header">
+                         
+                    <nav class="redes-sociales">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+            
+                    </nav><!--Fin redes-sociales-->
+                </div><!--Fin contenido-header-->
+            
+            
+        </div> <!--Fin encabezado-->
+            
+                
+<!--///////////////COMIENZO BARRA DE NAVEGACION///////////////-->
+            
+        <div class="barra">
+                
+            <div class="contenedor-barra">
+                        <div class="menu-movil">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+            </div>
+            
+            <div class="logo-marca">
+                        <img src="img/logoMarca.png" style="width:50px">
+            </div>
+            
+                <nav class="navegacion-principal clearfix">
+                          <a href="index.html" class="botones">Home</a>
+                          <a href="#" class="botones">Productos</a>
+                          <a href="faqs.html" class="botones">Preguntas frecuentes</a>
+                          <a href="login.html" >Iniciar sesion</a>
+                </nav>
+            <div class="carrito">
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+            </div><!--/////Fin CONTENEDOR-BARRA////-->
+        </div> <!--/////Fin BARRA DE NAVEGACION/////-->    
+            
+    </header><!--/////Fin HEADER//////-->
+            <img class="logooculto" src="img/logoWanderlust.png">
+
+    <main class="contenedor-login">
+        <div class="log1">
+    <h3 style="text-transform: uppercase">Login</h3>
+    <p class="frase">Completá tus datos:</p>
+
+    <form class= "" action="login.php" method="post"></form>
+        <p class="form">
+            <label for="email">E-mail:</label>
+            <input id= "email" type="email" name= "email" value="" placeholder="tu@email.com">
+        </p>
+
+        <p class="form">
+            <label for="pass">Contraseña:</label>
+            <input id= "pass" type="password" name= "pass" value="" placeholder="ingresá tu contraseña">
+        </p>
+
+        <p class="form boton-inicio">
+            <input type="submit" name="Enviar" value="Entrar">
+        </p>
+    <div class="registro">
+        <p class="form">¿Todavia no estás registrado?</p>
+        <p class="boton-registro"><a href="formulario.html">Registrarse</a></p>         
+    
+    </div>    
+
+    </div>
+    </main>
+
+    <footer class="site-footer">
+            <div class="contenedor">
+                  <div class="footer-informacion">
+                      <h3>Sobre <span>wanderlust</span></h3>
+                        <p>Creemos que cada viaje nos ofrece nuevas oportunidades de conectarnos con el mundo, con otras personas y con nosotros mismos.</p>
+                  </div>
+                  <div class="medios-pago">
+                      <h3>Medios de <span>Pago</span></h3>
+                      <ul><!--Medios de pago-->
+                        <li><i class="fab fa-cc-mastercard"></i> <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-amex"></i> <i class="fab fa-cc-paypal"></i></li> 
+                      </ul>
+                  </div>
+                  <div class="menu">
+                      <h3>Redes <span>sociales</span></h3>
+                      <nav class="redes-sociales">
+                          <a href="#"><i class="fab fa-facebook-f"></i></a>
+                          <a href="#"><i class="fab fa-twitter"></i></a>
+                          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                          <a href="#"><i class="fab fa-instagram"></i></a>
+                      
+                      </nav><!--Fin redes-sociales-->
+                  </div>
+          
+            </div><!--////Fin contenedor////-->
+          
+            <!--Frase Copyright-->
+            <p class="copyrights">Copyright &copy Todos los derechos reservados Wanderlust- 2019</p>
+          </footer>
+</body>
+</html>
