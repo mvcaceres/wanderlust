@@ -1,0 +1,131 @@
+*{
+    box-sizing: border-box;
+  }
+  body{
+    margin:0;
+    padding:0;
+  }
+
+
+.comentarios h2{
+    text-align: center;
+    color: #1C6A89;
+    
+}
+.testimonialesContenedor{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cajaTestimonial{
+    background-color: lightgray;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+.mensaje{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.cajaTestimonial p{
+    display: inline-block;
+    word-wrap: normal;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.cajaTestimonial p span{
+    visibility: hidden;
+}
+
+.comillas{
+    height: 40px;
+    width: 65.18px;
+    padding-left: 15px;
+}
+
+.info-testimonial{
+    width: 100%;
+}
+.infoTestimonial{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    align-items: center;
+}
+.infoTestimonial img{
+    height: 50px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.infoTestimonial cite{
+    font-size: 15px;
+    font-weight: bold;
+    color: #1C6A89;
+}
+
+.infoTestimonial span{
+    color: black;
+    font-style: normal;
+}
+
+@media (min-width: 480px){
+    .testimonialesContenedor{
+        flex-direction: row;
+    }
+    .cajaTestimonial{
+        width: 95%;
+        padding: 20px 10px;
+    }
+
+    .infoTestimonial cite{
+        font-size: 12px;
+        width: auto;
+    }
+
+    .infoTestimonial img{
+        margin-right: 5px;
+        height: 60px;
+    }
+}
+
+@media (min-width: 992px){
+
+    .testimonialesContenedor{
+        padding: 0px 70px;
+    }
+
+    .cajaTestimonial{
+        width: 250px;
+    }
+
+    .cajaTestimonial p{
+        font-size: 20px;
+    }
+
+    .infoTestimonial cite{
+        font-size: 15px;
+    }
+    .infoTestimonial img{
+        margin-right: 5px;
+        height: 70px;
+    }
+    
+    .testimonialesContenedor{
+        width: 100%;
+    }
+
+
+}

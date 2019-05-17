@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+  }
+  body{
+    margin:0;
+    padding:0;
+  }
+  
+  .contenedorFormulario{
+    background-image: url("../img/maletas_form.jpg");
+    width:100%;
+    height:100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+  }
+
+  .cuadradoFormulario{
+    padding: 40px;
+  }
+
+  .cuadradoFormulario h3{
+    color: #1C6A89;
+    font-size: 25px;
+    padding: 10px 0px;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  .cuadradoFormulario h3 span{
+    color:white;
+  }
+  
+  p.frase{
+      color: rgb(49, 49, 49);
+      font-weight: bold;
+      line-height: 2;
+  }
+  p.form{
+      color:rgb(255, 255, 255);
+      font-weight: bold;
+      margin:25px 5px;
+
+      padding:10px;
+      background-color:rgba(44, 42, 42, 0.5);
+  }
+  p.correo{
+      background-color:rgba(32, 105, 137,0.7);
+  }
+
+  p.form:nth-last-child{
+      margin-top:30px;
+  }
+  p.boton-enviar input{
+      background-color:rgb(32,105,137);
+      padding: 15px 40px;
+      color:#fff;
+      font-family: 'Noto Sans KR', sans-serif;
+      text-transform: uppercase;
+      font-weight: bold;
+  }
+  p.boton-enviar input:hover{
+      background-color:rgb(39, 153, 202);
+      transition: all .3s ease;
+  }
+  nav.navegacion-principal a.botones{
+        font-weight: bold;
+    }
+
+  @media (min-width:767px){
+      p.form{
+          width:50%;
+      }
+  }  
+  @media (min-width:979px){
+    
+  }  

@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box;
+  }
+  body{
+    margin:0;
+    padding:0;
+  }
+  html{
+   max-width:100%;
+  }
+
+ .form-boton-inicio input{
+    background-color:rgb(32,105,137);
+    padding: 10px 30px;
+    color:#fff;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;  
+    margin-top:10px;
+ }
+  
+  .contenedorLogin{
+    background-image: url("../img/fondoLogin.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position-x:center;
+    height: 600px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .cuadradoLogin{
+    margin-top: 10%;
+    padding-right: 20px;
+    text-align: right;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 90%;
+    height: 90%;
+  }
+  
+  a.boton-registro{
+  color:rgb(32,105,137);
+  font-weight: 600;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0px 5px;
+} 
+  a.boton-registro:hover{
+    text-decoration:none;
+    color: rgb(61, 147, 184);
+  }
+  
+
+
+  .cuadradoLogin h3{
+      color: #1C6A89;
+      font-size: 25px;
+      padding: 10px 10px;
+      text-align: right;
+      text-transform: uppercase;
+    }
+
+  .cuadradoLogin h3 span{
+    color:white;
+  }
+
+  .frase{
+    color: grey;
+    font-size: 20px;
+  }
+
+  .frase2{
+    color: white;
+    font-size: 20px;
+  }
+ 
+  .recordarme{
+    margin-right: 5px;
+    color: grey;
+  }
+
+  p.form{
+    background-color: rgba(000, 000, 000, 0.5);
+    padding: 5px;
+    color: white;
+    font-size: 20px;
+  }
+
+  @media(min-width:992px){
+    h3{
+      margin-top:20px;
+      margin-bottom:20px;
+    }
+    p.form{
+    height: 45px;
+  }
+    div.contenedor-1{
+      margin-bottom:100px;
+    }
+    div.registro{
+      margin-bottom:40px;
+    }
+
+    .cuadradoLogin{
+      margin-top:0px;
+      width: 50%;
+      height: 90%;
+
+    }
+
+    
+  }
