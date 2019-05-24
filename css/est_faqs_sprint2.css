@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR|Open+Sans+Condensed:300');
+*{
+  box-sizing: border-box;
+}
+html {
+    font-family: sans-serif;
+}
+body{
+  font-family: 'Noto Sans KR', sans-serif;
+  margin:0;
+}
+.container{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 95%;
+    margin: 3%;
+}
+div.titulo-preguntas h1{
+    padding-top:50px;
+    text-align: center;
+    color: lightgrey;
+    text-transform: uppercase;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 2em;
+    margin-bottom: 20px;
+    }
+div.titulo-preguntas h1 span{
+    color:#189D98;
+}
+section{
+  padding: 5%;
+  margin: 2%;
+  border-color: lightgrey;
+  border-style: solid;
+  border-width: thin;
+}
+.pregunta{
+    margin-top:2%;
+    width: 100%;
+}
+.pregunta h3{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1.2em;
+  color: #1C6A89;
+  text-align: left;#1C6A89
+}
+.pregunta p{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1em;
+  height: 14;
+}
+.banco{
+  max-width: 200px;
+  max-height: 50px;
+}
+div .tablaContainer{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  max-width: auto;
+}
+table{
+    flex-wrap: wrap;
+    font-family: 'Open Sans Condensed', sans-serif;
+    border-collapse: collapse;
+    border-spacing: 20;
+    margin-left: 20;
+    margin-top: 10px;
+    _border-style: solid;
+    _border-width: 1px;
+    _max-width: _400px;
+}
+thead{
+  flex-wrap: wrap;
+  text-align: center;
+  background-color: lightgrey;
+}
+.porcion1{
+  display: none;
+}
+.porcion2{
+  display: none;
+}
+.porcion3{
+  display: none;
+}
+.porcion4{
+  display: none;
+}
+td, th {
+  padding: 5px;
+  margin: 5px;
+}
+.airline-name{
+      width: 110px;
+}
+.airline-dimensions{
+      width: 90px;
+      text-align: center;
+}
+.airline-weight{
+      width: 70px;
+      text-align: center;
+}
+/* css para tablet */
+
+@media (min-width:480px) {
+  section{
+    padding: 2%;
+    margin: 2%;
+  }
+    .pregunta h3{
+        font-size: 1.2em;
+      }
+    .pregunta p{
+        font-size: 1em;
+      }
+    .porcion1{
+        display:table-header-group;
+      }
+
+    div .tablaContainer{
+      max-width: 790px;
+    }
+}
+
+/* css para monitor*/
+
+@media (min-width:992px) {
+  .pregunta h3{
+      font-size: 1.5em;
+    }
+  .pregunta p{
+      font-size: 1.3em;
+    }
+      .porcion2{
+          display:table-header-group;
+      }
+      .porcion3{
+          display:table-header-group;
+      }
+
+  div .tablaContainer{
+    min-width: 893px;
+    margin: auto;
+  }
+}

@@ -1,6 +1,17 @@
 <?php
 session_start();
- ?>
+
+// var_dump($_SESSION);
+// var_dump($_COOKIE['email']);
+
+if($_POST){
+  if(isset($_POST['logout'])){
+    session_destroy();
+    setcookie('email',"",time()-100);
+    header('Location:index.php');
+  }
+}
+?>
 
 
 <!DOCTYPE html>
@@ -39,8 +50,15 @@ session_start();
             <!-- inicio/registro -->
             <div class="inicio-registro">
               <nav class="inicioRegistro">
-                <a href="login.php" class="botones">Iniciar sesión</a>
-                <a href="formulario.php" class="registro">Registrarme</a>
+
+                <?php if(isset($_SESSION['nombreLogueado'])): ?>
+                  <h3>Hola <?= $_SESSION['nombreLogueado']?> </h3>
+
+                <?php else: ?>
+                  <a href="login.php" class="botones">Iniciar sesión</a>
+                  <a href="formulario.php" class="registro">Registrarme</a>
+                <?php endif; ?>
+
               </nav>
             </div>
             <!-- fin inicio/registro -->
@@ -53,7 +71,7 @@ session_start();
       </div>
 
       </div>
-      
+
 <!-- fin barra superior mobile y tablet -->
 
 <!-- barra inferior  -->
@@ -65,9 +83,9 @@ session_start();
         <!-- fin menu hamburguesa para mobile -->
 
         <!-- logo principal -->
-        
+
         <img id= "logoPrincipal" src="img/logoWanderlust.png" alt="logoW">
-        
+
         <!-- fin logo principal -->
 
         <!-- Opciones para tablet y desktop -->
@@ -76,8 +94,21 @@ session_start();
                 <a href="#" class="botones">PRODUCTOS</a>
                 <a href="faqs.html" class="botones">PREGUNTAS FRECUENTES</a>
                 <!-- solo desktop: -->
-                <a href="login.php" class="botonesD">Iniciar sesión</a>
-                <a href="formulario.php" class="botonesD">Registrarme</a>
+
+
+                <?php if(isset($_SESSION['nombreLogueado'])): ?>
+                  <a class="botonesD">Hola <?= $_SESSION['nombreLogueado']?> </a>
+
+                  <form class="botonesD" action="index.php" method="POST">
+                    <input  type="submit" name="logout" value="LogOut">
+                  </form>
+
+                <?php else: ?>
+                  <a href="login.php" class="botonesD">Iniciar sesión</a>
+                  <a href="formulario.php" class="botonesD">Registrarme</a>
+                <?php endif; ?>
+
+
                 <!-- carrito desktop: -->
                 <div class="carritoD">
                     <i class="fas fa-shopping-cart"></i>
@@ -86,14 +117,14 @@ session_start();
             </nav>
         </div>
 
-        
+
 
 
         <!-- fin opciones para tablet y desktop -->
     </div>
 <!-- fin barra inferior  -->
 
-    </header> 
+    </header>
 <!--///Fin contenido-header///-->
 
 <!--///Inicio Primera Seccion/Parte///-->
@@ -157,8 +188,8 @@ session_start();
               <p>Otros</p>
             </div>
           </li>
-        </ul>      
-  
+        </ul>
+
   </section>
   <!--////Fin productos////-->
 
@@ -175,12 +206,12 @@ session_start();
   </div>
   <!--///Fin DESCUENTOS///-->
 
-  
+
 <!--///Inicio COMENTARIOS///-->
 <section class="comentarios">
 
     <h2>OPINIONES</h2>
-               
+
     <div class="testimonialesContenedor">
         <div class="testimonial">
             <div class="cajaTestimonial">
@@ -195,7 +226,7 @@ session_start();
             </div>
 
         </div><!--////Fin primera opinion////-->
-          
+
 
         <div class="testimonial">
             <div class="cajaTestimonial">
@@ -258,15 +289,15 @@ session_start();
                   <a href="#"><i class="fab fa-twitter"></i></a>
                   <a href="#"><i class="fab fa-pinterest-p"></i></a>
                   <a href="#"><i class="fab fa-instagram"></i></a>
-  
+
               </nav><!--Fin redes-sociales-->
           </div>
-  
+
     </div><!--////Fin contenedor////-->
-  
+
     <!--Frase Copyright-->
     <p class="copyrights">Copyright &copy Todos los derechos reservados Wanderlust- 2019</p>
-  
+
   </footer>
 
   </body>

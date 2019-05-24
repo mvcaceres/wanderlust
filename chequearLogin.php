@@ -10,7 +10,13 @@ $usuarioEnArray= json_decode($usuarioEnJson,true);
 var_dump($usuarioEnArray); exit;
 
 
-if ($_POST['email'] != ""){
+if (!empty($_POST['email'])){
+        $usuarioEnJson= file_get_contents("usuarios.json");
+
+        $usuarioEnArray= json_decode($usuarioEnJson,true);
+        
+        var_dump($usuarioEnArray); exit;
+        
 
         // 1 chequear que exista si esta el email 
             // si esta, corroborar la contraseña (con JSON)

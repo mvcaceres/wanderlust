@@ -11,7 +11,7 @@ header{
   background-image: url("../img/fondoh.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-position-y: 0px; 
+  background-position-y: 0px;
   height: 180px;
   display: flex;
   flex-direction: column;
@@ -67,7 +67,7 @@ align-items: center;
 font-size: 25px;
 color: white;
 padding: 3px 7px;
-} 
+}
 
 /* fin barra superior */
 
@@ -106,7 +106,7 @@ display: none;
   header{
     height: 150px;
   }
-  
+
   .barraSuperior{
     flex-direction: row-reverse;
     padding-right: 10px;
@@ -127,15 +127,15 @@ display: none;
     width: auto;
     margin-right: 0px;
   }
-    
+
   .menuHamburguesa{
     display: none;
   }
-    
+
   .opciones{
     display: inline-block;
   }
-    
+
   .botones{
     color: white;
     margin-left: 5px;
@@ -149,6 +149,7 @@ display: none;
   .opciones .botonesD{
     display: none;
   }
+
 
   .navPrincipal{
     height: 30px;
@@ -179,14 +180,25 @@ display: none;
     color: #1C6A89;
     font-size: 25px;
     margin: 0px 5px;
- 
+
   }
 
   .barraSuperior-derecha{
-    display: none;  
+    display: none;
   }
 
   .opciones .botonesD{
+    display: inline-block;
+    color: white;
+    margin-left: 5px;
+    font-size: 10px;
+    padding: 2px 4px;
+    border: 2px solid #189D98;
+    text-align: center;
+    background-color: #189D98;
+  }
+
+  .opciones .holaD{
     display: inline-block;
     color: white;
     margin-left: 5px;
@@ -208,7 +220,7 @@ display: none;
     color: white;
 
   }
-  
+
   .navPrincipal{
     justify-content: space-between;
     width: 400px;
@@ -238,7 +250,7 @@ display: none;
   font-family: 'Noto Sans KR', sans-serif;
   font-size: 30px;
   text-transform:uppercase;
-  text-align:left; 
+  text-align:left;
   font-weight: bold;
   color:white;
   margin-left: 20px;
@@ -255,8 +267,8 @@ display: none;
 /* tablet: */
 @media (min-width:480px){
   .seccion1{
-    height:450px; 
-    background-position: center; 
+    height:450px;
+    background-position: center;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center ;
@@ -266,13 +278,13 @@ display: none;
     height: auto;
     width: auto;
     font-size: 25px;
-    text-align:center; 
+    text-align:center;
     color:#1C6A89;
     margin-left: 0px;
     margin-bottom: 0px;
     background: transparent;
     padding: 0px;
-    margin-top: 50px; 
+    margin-top: 50px;
   }
 
   .contenedor-dibujo{
@@ -399,7 +411,7 @@ div.producto:hover p{
   }
   ul.lista-productos li div.producto{
     width: 100%;
-  
+
   }
 
 }
@@ -408,7 +420,7 @@ div.producto:hover p{
 @media (min-width: 992px){
   section.productos-contenedor{
     width: 100%;
-    
+
 }
 
   ul.lista-productos{
@@ -514,7 +526,7 @@ p.numero img{
   text-align: center;
   color: #1C6A89;
   margin-bottom: 20px;
-  
+
 }
 .testimonialesContenedor{
   width: 100%;
@@ -567,7 +579,7 @@ p.numero img{
 .infoTestimonial{
   display: flex;
   flex-direction: row;
-  justify-content: space-around; 
+  justify-content: space-around;
   align-items: center;
 }
 .infoTestimonial img{
@@ -630,7 +642,7 @@ p.numero img{
       margin-right: 5px;
       height: 70px;
   }
-  
+
   .testimonialesContenedor{
       width: 100%;
   }
@@ -674,7 +686,7 @@ a.buttonTransparente {
   width: 90%;
   margin-bottom: 20px;
 
-} 
+}
 /* fin NEWSLETTER */
 
 
@@ -708,7 +720,7 @@ footer.site-footer div.contenedor div{
   margin-top:0px;
   padding-top: 20px;
   text-align: center;
-} 
+}
 
 footer h3{
   color: #fff;
@@ -764,17 +776,5 @@ p.copyrights{
     margin-top:0px;
     padding-top: 20px;
     width: 33.33%;
-  } 
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
