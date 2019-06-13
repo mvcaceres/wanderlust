@@ -30,7 +30,8 @@ if($_POST){
   </head>
 
   <body>
-<?php include('header.php') ?>
+      <?php include('header.php') ?>
+
 <!--///Fin contenido-header///-->
 
 <!--///Inicio Primera Seccion/Parte///-->
