@@ -96,7 +96,9 @@ if (isset($_SESSION['emailLogueado'])){
   </head>
 
   <body>
+    <header>
   <?php include('header.php') ?>
+    </header>
 <!--///Fin contenido-header///-->
 
 <!-- ///Inicio login/// -->
@@ -131,7 +133,7 @@ if (isset($_SESSION['emailLogueado'])){
 
             </div>
             <div class="registro">
-                <p class="frase2">¿Todavia no sos miembro? <a class="boton-registro" href="formulario.php">¡REGISTRATE!</a></p>
+                <p class="frase2">¿Todavia no sos miembro? <a class="boton-registro" href="formulario.html">¡REGISTRATE!</a></p>
 
             </div>
     </div>

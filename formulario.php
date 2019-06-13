@@ -26,9 +26,9 @@ $hayErrores = false;
   if($_POST){
 
 
-    
 
-    
+
+
     $nombre = trim($_POST["nombre"]);
     $apellido = trim($_POST["apellido"]);
     $telefono = trim($_POST["telefono"]);
@@ -36,7 +36,7 @@ $hayErrores = false;
     $pass = trim($_POST["pass"]);
     $passRep = trim($_POST["passRep"]);
     $foto = $_FILES["foto"];
-   
+
 
 
     //VALIDACION DE CADA DATO:
@@ -102,7 +102,7 @@ $hayErrores = false;
       }
 
     // validación foto (solo nos fijamos si tiene un error la foto,
-    // si el formulario está bien, vamos a subirla al archivo una vez que esté todo 
+    // si el formulario está bien, vamos a subirla al archivo una vez que esté todo
     // correctamente completado:
 
     if(isset($_FILES["foto"])){
@@ -110,7 +110,7 @@ $hayErrores = false;
           $nombreFoto = $_FILES["foto"]["name"];
           $origen = $_FILES["foto"]["tmp_name"];
           $ext = pathinfo($nombreFoto,PATHINFO_EXTENSION);
-  
+
           $destino = "";
           $destino = $destino."fotoPerfil/";
           $destino = $destino.$nombre."fotoDelUsuario.".$ext;
@@ -121,7 +121,7 @@ $hayErrores = false;
           $hayErrores = true;
       }
 
-    
+
     // Si no hay errores, se registra al usuario y se guarda en un JSON:
 
     if(!$hayErrores){
@@ -131,7 +131,7 @@ $hayErrores = false;
         $errorFoto = " =) El archivo se subió con éxito";
         // ------------------------------------------------------------------------
         $JsonBase= file_get_contents("usuarios.json");
-        $baseEnArray= json_decode($JsonBase,true); 
+        $baseEnArray= json_decode($JsonBase,true);
 
 
         $usuarioNuevoEnArray= [
@@ -142,15 +142,15 @@ $hayErrores = false;
         "pass" => password_hash($pass, PASSWORD_DEFAULT),
         "foto" => $nombre."fotodeperfil.".$ext];
 
-        
 
-        $baseEnArray[] = $usuarioNuevoEnArray; 
+
+        $baseEnArray[] = $usuarioNuevoEnArray;
 
 
         $nuevaListaDeUsuariosEnJson= json_encode($baseEnArray);
 
         file_put_contents('usuarios.json',$nuevaListaDeUsuariosEnJson);
-        
+
         header('Location:login.php');
       }
 
@@ -181,84 +181,10 @@ $hayErrores = false;
 </head>
 
 <body>
-    <header>
-        <!-- barra superior mobile y tablet -->
-            <div class="barraSuperior">
-                <div class="barraSuperior-izquierda">
-                    <!-- Redes Sociales -->
-                    <div class="RRSS">
-                    <nav class="redesSociales">
-                                <a href="#"><i class="fab fa-facebook"></i></a>
-                                <a href="#"><i class="fab fa-twitter-square"></i></a>
-                                <a href="#"><i class="fab fa-pinterest"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                    </nav>
-                    </div>
-                    <!--Fin redes-sociales-->
-                </div>
-        
-                <div class="barraSuperior-derecha">
-                    <!-- inicio/registro -->
-                    <div class="inicio-registro">
-                    <nav class="inicioRegistro">
-                        <a href="login.php" class="botones">Iniciar sesión</a>
-                        <a href="formulario.php" class="registro">Registrarme</a>
-                    </nav>
-                    </div>
-                    <!-- fin inicio/registro -->
-        
-                    <!-- carrito: -->
-                    <div class="carrito">
-                    <i class="fas fa-shopping-cart"></i>
-                    </div>
-                    <!-- fin Carrito -->
-            </div>
-        
-            </div>
-            
-        <!-- fin barra superior mobile y tablet -->
-        
-        <!-- barra inferior  -->
-            <div class="barraInferior">
-                <!-- menu hamburguesa para mobile -->
-                <div class="menuHamburguesa">
-                    <img id= "logoHamburguesa" src="img/menuHamburguesa.png" alt="logoW">
-                </div>
-                <!-- fin menu hamburguesa para mobile -->
-        
-                <!-- logo principal -->
-                
-                <img id= "logoPrincipal" src="img/logoWanderlust.png" alt="logoW">
-                
-                <!-- fin logo principal -->
-        
-                <!-- Opciones para tablet y desktop -->
-                <div class="opciones">
-                    <nav class="navPrincipal">
-                        <a href="#" class="botones">PRODUCTOS</a>
-                        <a href="faqs.html" class="botones">PREGUNTAS FRECUENTES</a>
-                        <!-- solo desktop: -->
-                        <a href="login.php" class="botonesD">Iniciar sesión</a>
-                        <a href="formulario.php" class="botonesD">Registrarme</a>
-                        <!-- carrito desktop: -->
-                        <div class="carritoD">
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
-                        <!-- fin Carrito desktop -->
-                    </nav>
-                </div>
-        
-                
-        
-        
-                <!-- fin opciones para tablet y desktop -->
-            </div>
-        <!-- fin barra inferior  -->
-        
-    </header> 
+  <?php include('header.php') ?>
 <!--///Fin contenido-header///-->
-        
-    
+
+
 <div class="contenedorFormulario">
     <div class="cuadradoFormulario">
         <h3>¡Unite a <span>Wanderlust!</span> </h3>
@@ -320,7 +246,7 @@ $hayErrores = false;
                   <div class="medios-pago">
                       <h3>Medios de <span>Pago</span></h3>
                       <ul><!--Medios de pago-->
-                        <li><i class="fab fa-cc-mastercard"></i> <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-amex"></i> <i class="fab fa-cc-paypal"></i></li> 
+                        <li><i class="fab fa-cc-mastercard"></i> <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-amex"></i> <i class="fab fa-cc-paypal"></i></li>
                       </ul>
                   </div>
                   <div class="menu">
@@ -330,15 +256,15 @@ $hayErrores = false;
                           <a href="#"><i class="fab fa-twitter"></i></a>
                           <a href="#"><i class="fab fa-pinterest-p"></i></a>
                           <a href="#"><i class="fab fa-instagram"></i></a>
-                      
+
                       </nav><!--Fin redes-sociales-->
                   </div>
-          
+
             </div><!--////Fin contenedor////-->
-          
+
             <!--Frase Copyright-->
             <p class="copyrights">Copyright &copy Todos los derechos reservados Wanderlust- 2019</p>
-          
+
           </footer>
 
     </body>

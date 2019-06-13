@@ -30,101 +30,7 @@ if($_POST){
   </head>
 
   <body>
-    <header>
-<!-- barra superior mobile y tablet -->
-      <div class="barraSuperior">
-        <div class="barraSuperior-izquierda">
-            <!-- Redes Sociales -->
-            <div class="RRSS">
-            <nav class="redesSociales">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter-square"></i></a>
-                        <a href="#"><i class="fab fa-pinterest"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-            </nav>
-            </div>
-            <!--Fin redes-sociales-->
-        </div>
-
-        <div class="barraSuperior-derecha">
-            <!-- inicio/registro -->
-            <div class="inicio-registro">
-              <nav class="inicioRegistro">
-
-                <?php if(isset($_SESSION['nombreLogueado'])): ?>
-                  <h3>Hola <?= $_SESSION['nombreLogueado']?> </h3>
-
-                <?php else: ?>
-                  <a href="login.php" class="botones">Iniciar sesión</a>
-                  <a href="formulario.php" class="registro">Registrarme</a>
-                <?php endif; ?>
-
-              </nav>
-            </div>
-            <!-- fin inicio/registro -->
-
-            <!-- carrito: -->
-            <div class="carrito">
-              <i class="fas fa-shopping-cart"></i>
-            </div>
-            <!-- fin Carrito -->
-      </div>
-
-      </div>
-
-<!-- fin barra superior mobile y tablet -->
-
-<!-- barra inferior  -->
-    <div class="barraInferior">
-        <!-- menu hamburguesa para mobile -->
-        <div class="menuHamburguesa">
-            <img id= "logoHamburguesa" src="img/menuHamburguesa.png" alt="logoW">
-        </div>
-        <!-- fin menu hamburguesa para mobile -->
-
-        <!-- logo principal -->
-
-        <img id= "logoPrincipal" src="img/logoWanderlust.png" alt="logoW">
-
-        <!-- fin logo principal -->
-
-        <!-- Opciones para tablet y desktop -->
-        <div class="opciones">
-            <nav class="navPrincipal">
-                <a href="#" class="botones">PRODUCTOS</a>
-                <a href="faqs.html" class="botones">PREGUNTAS FRECUENTES</a>
-                <!-- solo desktop: -->
-
-
-                <?php if(isset($_SESSION['nombreLogueado'])): ?>
-                  <a class="botonesD">Hola <?= $_SESSION['nombreLogueado']?> </a>
-
-                  <form class="botonesD" action="index.php" method="POST">
-                    <input  type="submit" name="logout" value="LogOut">
-                  </form>
-
-                <?php else: ?>
-                  <a href="login.php" class="botonesD">Iniciar sesión</a>
-                  <a href="formulario.php" class="botonesD">Registrarme</a>
-                <?php endif; ?>
-
-
-                <!-- carrito desktop: -->
-                <div class="carritoD">
-                    <i class="fas fa-shopping-cart"></i>
-                  </div>
-                <!-- fin Carrito desktop -->
-            </nav>
-        </div>
-
-
-
-
-        <!-- fin opciones para tablet y desktop -->
-    </div>
-<!-- fin barra inferior  -->
-
-    </header>
+<?php include('header.php') ?>
 <!--///Fin contenido-header///-->
 
 <!--///Inicio Primera Seccion/Parte///-->
@@ -264,7 +170,7 @@ if($_POST){
       <div class="contenido contenedor">
           <p>Registrate al newsletter:</p>
             <h3 class="logo-newsletter"><img src="img/logo letras blanco.png"></h3>
-              <a href="formulario.html" class="buttonTransparente">registro</a>
+              <a href="formulario.php" class="buttonTransparente">registro</a>
       </div>
   </div>
 <!--///Fin newsletter///-->

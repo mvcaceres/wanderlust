@@ -15,6 +15,9 @@ session_start();
 </head>
 
 <body>
+
+  <?php include('header.php') ?>
+  
 <div class="titulo-preguntas">
 <h1>Preguntas<span> Frecuentes</span></h1>
 </div>
